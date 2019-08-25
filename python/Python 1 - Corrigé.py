@@ -49,3 +49,12 @@ df['profit'] = df['prix'] * df['ventes']
 print('Exercise 6 c)\n', df)
 resultat = df[['prix', 'ventes', 'profit']].median()
 print('Exercise 6 d)\n', resultat)
+
+# Exercise 7
+données = np.loadtxt('data/matrice.txt')
+np.savetxt(fname = 'data/matrice_2.txt', X = données)
+print('Exercise 7 a)\n', 'Les données ont été enregistrées en chiffres décimaux plutôt qu\'entiers!')
+
+# Exercise 8
+bost_df = pd.read_excel('data/boston_crime_august_2018.xlsx', index_col = 'INCIDENT_NUMBER')
+print('Exercise 8 a)\n', bost_df.head())
