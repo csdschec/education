@@ -58,3 +58,40 @@ print('Exercise 7 a)\n', 'Les données ont été enregistrées en chiffres déci
 # Exercise 8
 bost_df = pd.read_excel('data/boston_crime_august_2018.xlsx', index_col = 'INCIDENT_NUMBER')
 print('Exercise 8 a)\n', bost_df.head())
+
+### FIN DU PREMIER COURS ###
+
+# Exercise 1
+def longueur(chaine):
+    x = len(chaine)
+    if x >= 5:
+        print('La chaîne comporte 5 lettres ou plus.')
+    elif x == 0:
+        print('La chaîne est vide.')
+    else:
+        print('La chaîne comporte moins de 5 lettres.')
+
+print('Exercise 1 b)')
+longueur('chat')
+print('Exercise 1 c)')
+longueur('')
+print('Exercise 1 d)')
+longueur('Stella')
+
+# Exercise 2
+y = (1, 2, 3)
+def essaie(function):
+    try:
+        if function == 1:
+            print(y[3])
+        elif function ==2:
+            y[2] = 0
+    except IndexError as e:
+        print(e)
+    except TypeError as e:
+        print(e)
+
+print('Exercise 2 b)')
+essaie(1)
+print('Exercise 2 c)')
+essaie(2)
