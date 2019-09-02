@@ -59,9 +59,9 @@ print('Exercise 7 a)\n', 'Les données ont été enregistrées en chiffres déci
 bost_df = pd.read_excel('data/boston_crime_august_2018.xlsx', index_col = 'INCIDENT_NUMBER')
 print('Exercise 8 a)\n', bost_df.head())
 
-############################
-### FIN DU PREMIER COURS ###
-############################
+######################
+### FIN DU COURS 1 ###
+######################
 
 # Exercise 1
 def longueur(chaine):
@@ -105,6 +105,7 @@ for lettre in chaine:
     print(lettre)
 
 print('Exercise 3 b)')
+ma_liste = [[1,2,3],[4,5,6],[7,8,9]]
 for élément in ma_liste[0]:
     print(élément)
 
@@ -116,6 +117,7 @@ while len(chaine) < 8:
     print (chaine)
 
 # Exercise 5
+from sklearn.linear_model import LinearRegression
 print('Exercise 5 a)')
 x = np.array([[0, 1], [5, 2], [15 , 3], [25, 4], [35, 5], [45, 6], [55, 7]])
 y = np.array([0, 6, 14, 27, 33, 48, 50])
@@ -127,23 +129,31 @@ print('L\'équation de la régression est y = ',
       round(model.intercept_,2))
 
 # Exercise 6
+from sklearn import metrics
 print('Exercise 6 a)')
-# définition de la fonction de calcule de la MAE
-def calcule_mae(y, y_pred):
-    residuts = y-y_pred
-    residuts_absolus = abs(residuts)
-    sum_residuts_absolus = residuts_absolus.sum()
-    mae = sum_residuts_absolus/len(y)
-
-    return mae
-
 # calcul des indicateurs de performance
 y_pred = model.predict(x)
-mae = calcule_mae(y, y_pred)
+mae = metrics.mean_absolute_error(y, y_pred)
 R_2 = model.score(x, y)
 print('Le coefficient de détermination est:', round(R_2, 4),
         '\n et la MAE est de:', round(mae, 4),
         '. Ils n\'ont pas vraiment changé.')
 
 print('Exercise 6 b)')
-print('La valeur prédite est:', round(model.predict([[65, 8]])[0],4)
+print('La valeur prédite est:', round(model.predict([[65, 8]])[0],4))
+
+# Exercise 7
+import matplotlib.pyplot as plt
+print('Exercise 7 a)')
+plt.hist(bost_df.OFFENSE_CODE)
+plt.title('Histogramme des codes d\'infraction \n ayant eu lieu lors du mois d\'août 2018')
+plt.xlabel('Codes d\'infraction')
+plt.ylabel('Fréquence')
+plt.show()
+
+print('Exercise 7 b) \n',
+        'Non, OFFENSE_CODE est une variable discrète.')
+
+######################
+### FIN DU COURS 2 ###
+######################
