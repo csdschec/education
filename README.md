@@ -1,8 +1,8 @@
-# Éducation
-Bienvenue sur le GitHub du CSD\DSC de HEC Montréal. Vous trouverez ici l'ensemble des ressources pédagogiques mis au point par le comité. Suivez-nous sur Facebook (https://www.facebook.com/csdsc.hec/) afin de savoir les dates et lieux des ateliers où seront utilisées ces ressources.
+# Ressources éducatives du CSD|DSC
+Bienvenue sur le GitHub du CSD|DSC de HEC Montréal. Vous trouverez ici l'ensemble des outils pédagogiques mis au point par le comité. Suivez-nous sur Facebook (https://www.facebook.com/csdsc.hec/) afin de savoir les dates et lieux des prochains ateliers.
 
 ## Avant l'atelier
-### Installation des logiciels
+### 1 - Installation des logiciels
 Avant de venir à l'atelier, assurez-vous d'avoir installé les logiciels nécéssaires, selon le cas. 
 
 #### Python
@@ -16,8 +16,8 @@ Avant de venir à l'atelier, assurez-vous d'avoir installé les logiciels nécé
 #### Power BI
 * Power BI Desktop, disponible ici : https://www.microsoft.com/en-us/download/details.aspx?id=58494
 
-### Clonage du Git
-Vous aurez besoin de ce dépôt (*repository*) afin de suivre correctement le cours, à moins que vous désiriez uniquement lire les Jupyter Notebook pré-compilés.
+### 2 - Clonage du Git
+Vous aurez besoin de ce dépôt (*repository*) afin de suivre correctement le cours, à moins que vous désiriez uniquement lire les *Jupyter Notebook* pré-compilés.
 
 #### Avec l'application
 
