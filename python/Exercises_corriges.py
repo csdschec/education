@@ -114,3 +114,36 @@ chaine = 'miaou'
 while len(chaine) < 8:
     chaine = chaine + 'u'
     print (chaine)
+
+# Exercise 5
+print('Exercise 5 a)')
+x = np.array([[0, 1], [5, 2], [15 , 3], [25, 4], [35, 5], [45, 6], [55, 7]])
+y = np.array([0, 6, 14, 27, 33, 48, 50])
+model = LinearRegression()
+model = model.fit(x, y)
+print('L\'équation de la régression est y = ',
+      round(model.coef_[0],2),'x1 +',
+      round(model.coef_[1],2),'x2',
+      round(model.intercept_,2))
+
+# Exercise 6
+print('Exercise 6 a)')
+# définition de la fonction de calcule de la MAE
+def calcule_mae(y, y_pred):
+    residuts = y-y_pred
+    residuts_absolus = abs(residuts)
+    sum_residuts_absolus = residuts_absolus.sum()
+    mae = sum_residuts_absolus/len(y)
+
+    return mae
+
+# calcul des indicateurs de performance
+y_pred = model.predict(x)
+mae = calcule_mae(y, y_pred)
+R_2 = model.score(x, y)
+print('Le coefficient de détermination est:', round(R_2, 4),
+        '\n et la MAE est de:', round(mae, 4),
+        '. Ils n\'ont pas vraiment changé.')
+
+print('Exercise 6 b)')
+print('La valeur prédite est:', round(model.predict([[65, 8]])[0],4)
