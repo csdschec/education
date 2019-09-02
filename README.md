@@ -17,11 +17,11 @@ Avant de venir à l'atelier, assurez-vous d'avoir installé les logiciels nécé
 * Power BI Desktop, disponible ici : https://www.microsoft.com/en-us/download/details.aspx?id=58494
 
 ### 2 - Clonage du Git
-Vous aurez besoin de ce dépôt (*repository*) afin de suivre correctement le cours, à moins que vous désiriez uniquement lire les *Jupyter Notebook* pré-compilés.
+Vous aurez besoin de ce dépôt (*repository*) afin de suivre correctement le cours, à moins que vous désiriez uniquement lire les Jupyter Notebook pré-compilés.
 
 #### Avec l'application
 
-GitHub publie une application avec une interface épurée et facile d'approche permettant toutes les commandes ```git```ici : https://desktop.github.com
+GitHub publie une application avec une interface facile d'approche permettant toutes les commandes ```git```ici : https://desktop.github.com
 
 #### Avec l'invite de commande
 
