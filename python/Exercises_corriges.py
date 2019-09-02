@@ -59,7 +59,9 @@ print('Exercise 7 a)\n', 'Les données ont été enregistrées en chiffres déci
 bost_df = pd.read_excel('data/boston_crime_august_2018.xlsx', index_col = 'INCIDENT_NUMBER')
 print('Exercise 8 a)\n', bost_df.head())
 
+############################
 ### FIN DU PREMIER COURS ###
+############################
 
 # Exercise 1
 def longueur(chaine):
@@ -95,3 +97,20 @@ print('Exercise 2 b)')
 essaie(1)
 print('Exercise 2 c)')
 essaie(2)
+
+# Exercise 3
+print('Exercise 3 a)')
+chaine = 'Stella'
+for lettre in chaine:
+    print(lettre)
+
+print('Exercise 3 b)')
+for élément in ma_liste[0]:
+    print(élément)
+
+# Exercise 4
+print('Exercise 4 a)')
+chaine = 'miaou'
+while len(chaine) < 8:
+    chaine = chaine + 'u'
+    print (chaine)
