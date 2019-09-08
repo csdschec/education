@@ -11,6 +11,9 @@ Avant de venir à l'atelier, assurez-vous d'avoir installé les logiciels nécé
   * Dans Anaconda-navigator, avoir Jupyter Notebook (Notebook)
 
 #### R
+Il est important d'installer la console de R "ET" R Studio car R Studio n'est qu'un éditeur de texte spécifiquement concu pour éditer du code R. Il ne peut donc fonctionner sans le logiciel R.
+* R Console pour Windows lien : https://cran.r-project.org/bin/windows/base/
+* R Console pour Mac Os  lien : https://cran.r-project.org/bin/macosx/
 * R Studio, disponible ici : https://www.rstudio.com/products/rstudio/download/#download
 
 #### Power BI
