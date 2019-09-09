@@ -9,11 +9,11 @@ Avant de venir à l'atelier, assurez-vous d'avoir installé les logiciels nécé
 * Anaconda, disponible ici : https://www.anaconda.com/distribution/
   * Dans Anaconda-navigator, avoir Microsoft Visual Studio Code (VS Code)
   * Dans Anaconda-navigator, avoir Jupyter Notebook (Notebook)
+* Une distribution récente de Python, comme la 3.7.4 : https://www.python.org/downloads/release/python-374/
 
 #### R
-Il est important d'installer la console de R "ET" R Studio car R Studio n'est qu'un éditeur de texte spécifiquement concu pour éditer du code R. Il ne peut donc fonctionner sans le logiciel R.
-* R Console pour Windows lien : https://cran.r-project.org/bin/windows/base/
-* R Console pour Mac Os  lien : https://cran.r-project.org/bin/macosx/
+Il est important d'installer la console de R ainsi que R Studio car R Studio n'est qu'un éditeur de texte spécifiquement conçu pour éditer du code R. Il ne peut donc fonctionner sans le logiciel R.
+* R Console, disponible ici : https://cran.r-project.org/bin/
 * R Studio, disponible ici : https://www.rstudio.com/products/rstudio/download/#download
 
 #### Power BI
