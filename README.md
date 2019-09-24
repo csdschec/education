@@ -28,9 +28,11 @@ GitHub publie une application avec une interface facile d'approche permettant to
 
 #### Avec l'invite de commande
 
-Utiliser la commande suivante dans le dossier désiré : ```git clone https://github.com/csdschec/education.git```
+Installer Git à partir de ce site web : https://git-scm.com/downloads, puis utiliser la commande suivante dans le dossier désiré : ```git clone https://github.com/csdschec/education.git```
 Sinon, vous référer à ce guide : https://help.github.com/en/articles/cloning-a-repository
 
+## Après l'atelier
 
+Remplir, avant de quitter la salle de classe, le formulaire d'amélioration continue suivant : https://docs.google.com/forms/d/e/1FAIpQLSeaSCIS0m4yuH6LxvZ0hn-VOVXVBStdn9oiEiPmfu7JfeG4Vw/viewform?usp=pp_url
 
-Dernière mise à jour : 2 septembre 2019 par Samuel Tremblay
+Dernière mise à jour : 24 septembre 2019 par Samuel Tremblay
