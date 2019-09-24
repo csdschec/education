@@ -33,6 +33,6 @@ Sinon, vous référer à ce guide : https://help.github.com/en/articles/cloning-
 
 ## Après l'atelier
 
-Remplir, avant de quitter la salle de classe, le formulaire d'amélioration continue suivant : https://docs.google.com/forms/d/e/1FAIpQLSeaSCIS0m4yuH6LxvZ0hn-VOVXVBStdn9oiEiPmfu7JfeG4Vw/viewform?usp=pp_url
+Remplir, avant de quitter la salle de classe, le formulaire d'amélioration continue suivant : https://forms.gle/MyWox6A7YDnZHsFD7
 
 Dernière mise à jour : 24 septembre 2019 par Samuel Tremblay
