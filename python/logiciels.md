@@ -40,6 +40,6 @@
 
 ![](images/vs5.png)
 
-6. Le terminal va s'initialiser et votre script va s'exécuter. Pour l'exécuter à nouveau, écrire directement ```python```suivi du nom de votre script dans le terminal.
+6. Le terminal va s'initialiser et votre script va s'exécuter. Pour l'exécuter à nouveau, écrire ```python``` suivi du nom de votre script directement dans le terminal.
 
 ![](images/vs6.png)
