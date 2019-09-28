@@ -1,4 +1,4 @@
-# Utilisation des logiciels des ateliers
+# Utilisation des logiciels
 
 ## Accéder aux Jupyter Notebook
 
