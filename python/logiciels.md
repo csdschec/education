@@ -32,11 +32,11 @@
 
 ![](images/vs3.png)
 
-4. Vous verez le menu suivant apparaître à gauche. Cliquer sur l'icône afin de créer un nouveau script. Ne pas oublier pas de terminer son nom par ```.py```.
+4. Vous verez le menu suivant apparaître à gauche. Cliquer sur l'icône afin de créer un nouveau script. Ne pas oublier de terminer son nom par ```.py```.
 
 ![](images/vs4.png)
 
-5. Une fois le script prêt à être exécuté, clique droit dessus et sélectionner l'option en bleu.
+5. Une fois le script prêt à être exécuté, effectuer un clique droit dessus et sélectionner l'option en bleu.
 
 ![](images/vs5.png)
 
