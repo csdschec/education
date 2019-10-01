@@ -1,0 +1,153 @@
+###########################################
+###########################################
+####             Corriger              ####
+###########################################
+###########################################
+
+
+
+######################
+#     Réponse 1      #
+######################
+x=1:10
+x
+10^x;log10(x);sum(x);cumsum(x);prod(x);cumprod(x)
+10^x
+log10(x)
+
+table1=data.frame(Entiers=x, Puissances=(10^x), Log.decimal=log10(x), 
+                  Produit.cumulee=cumprod(x), Somme.cumulee=cumsum(x))
+table1
+  
+######################
+#     Réponse 2      #
+######################
+
+############
+#1
+v1=rep(1:5,times=3)
+v1
+v2=c(rep(1,3), rep(2,3), rep(3,3), rep(4,3), rep(5,3))
+v2
+#ou plus simplement
+v2=rep(1:5, each=3)
+v3=c(rep(1,2), rep(2,3), rep(3,4), rep(4,5))
+#ou plus simplement
+vec3=rep(1:4, c(2,3,4,5))
+
+v1
+v2
+v3
+
+############
+#2.
+
+tab=data.frame(v1,v2,v3)
+mat=as.matrix(tab)
+mat=t(mat)
+mat
+
+rownames(mat)=paste("ligne",1:nrow(mat),sep="")
+colnames(mat)=paste("col",1:ncol(mat),sep="")
+mat
+
+#Obtenir les elements diagonaux de mat
+diagonal=diag(mat)
+diagonal
+
+#Creer la matrice avec seulement les deux premieres ligne de mat
+mat.2=mat[1:2,]
+mat.2
+
+#Creer la matrice contenant les deux dernieres colonnes
+mat.3=mat[,3:4]
+#ou
+mat.3=mat[,(ncol(mat)-1):ncol(mat)]
+mat.3
+
+#Creer la matrice contenant toutes les colonnes de mat sauf la troisieme
+mat.4=mat[,-3]
+mat.4
+
+#Calculer le determinant de mat
+determinant=det(mat)
+determinant
+
+#Inverser la matrice
+inverse.mat=solve(mat)
+inverse.mat
+
+############
+#3.
+
+WorldPhones
+typeof(WorldPhones) #Donne le type des données contenues dans WorldPhones
+class(WorldPhones) #Donne la nature de WorldPhones
+
+
+
+##3.1)
+###Technique 1: on utilise les fonctions rowSums et colSums:
+nbrTelAn = rowSums(WorldPhones)
+nbrTelAn
+nbrTelCont = colSums(WorldPhones)
+nbrTelCont
+
+###Technique 2: Plus générale (marche pour d'autres fonctions que sum) avec apply
+#Apply prend (au moins) 3 arguments: l'objet d'intérêt, la dimensions d'intérêt
+#et l'opération ou la fonction à appliquer
+nbrTelAn = apply(WorldPhones,1,sum)
+nbrTelAn
+#Littéralement : applique à chaque ligne (dimension 1) de WolrdPhones la fct sum.
+nbrTelCont = apply(WorldPhones,2,sum)
+nbrTelCont
+#Littéralement : applique à chaque colonne (dimension 2) de WolrdPhones la fct sum.
+
+
+##3.2)
+#Pour l'élément min et max, on a les fcts suivantes:
+which.max(nbrTelCont) 
+which.min(nbrTelCont)
+#Pour un critère vrai/faux général, which nous retourne un vecteur des
+#Éléments (indices) respectant la condition.
+which(nbrTelCont>20000)
+#Ici c'est facile, mais en général on utilise length pour savoir le nb d'éléments
+#dans un vecteur ou une liste.
+length(which(nbrTelCont>20000))
+
+
+##3.3
+#sum(nbrTelCont) nous donne le nombre total de tels, je m'en sers pour trouver 
+#les proportions dans chaque continent:
+Pourcentage=100*nbrTelCont/sum(nbrTelCont)
+#Création d'un data.frame
+tab1=data.frame(Nombre=nbrTelCont,Pourcentage,PourCum=cumsum(Pourcentage))
+tab1
+
+
+##3.4
+plot(Pourcentage/100, xlab="Continent")
+plot(Pourcentage/100, xlab="Continent",ylab="%",
+     main='Pourcentage de nombre de téléphones par continent')
+plot(Pourcentage/100, xlab="Continent",ylab="%",
+     main='Pourcentage de nombre de téléphones par continent',xlim=c(0,8),ylim=c(0,1))
+plot(Pourcentage/100, xlab="Continent",ylab="%",
+          main='Pourcentage de nombre de téléphones par continent',xlim=c(0,8),ylim=c(0,1)
+     ,col=4,pch=18,cex=1)
+text(Pourcentage/100,names(nbrTelCont),col="red",cex=1,pos=3)
+
+#plot prend en premiers arguments les coordonnées x et y des points à afficher. Si
+#comme ici il y a un seul vecteur de coordonnées, R les considère comme les y et 
+#utilise 1:n pour les coordonnées en x. Le reste sert à embellir le graphique:
+
+#Textes : xlab: texte de l'axe des x, ylab : texte de l'axe des y, main:titre, sub: sous-titre
+
+#Dimensions : On peut choisir les limites du graphe en donnant un vecteur de 2 points xlim et/ou ylim.
+#cex: change la taille des éléments du graphe, 1=pas de changement
+#0.5 = 2 fois plus petit, etc.
+
+#Points: col : couleur , prend un chiffre ou un texte, ou vecteur chiffres/textes.
+#pch: forme des points, fonctionne comme col
+
+
+
