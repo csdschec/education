@@ -1,0 +1,27 @@
+### Exercice 1
+
+for(i in 10:22){
+    print(colnames(dataset)[i])
+    print(summary(dataset[,i]))
+}
+
+#### Des statistiques quand même assez disparâtres avec une proportion non négligeable de valeur manquantes. 
+#### Sans surprise toutefois en raison des différences entre les pays à l'étude.
+
+### Exercice 2
+
+# Year as numeric
+plot(Lifeexpectancy~Year, xlab="Year", ylab="Lifeexpectancy")
+
+# Year as factor
+boxplot(Lifeexpectancy~Year, xlab="Year", ylab="Lifeexpectancy")
+
+#### en tant que variable numérique on a deux avantages clairs avec Year:
+#### 1. la relation linéaire est bien plus évidente
+#### 2. une seule bariable est intégrée au modèle plutôt que k-1
+#### où k représente le nombre de catégorie de Year (ici k=16)
+
+#### En fait, la question ne se pose pas vraiment.
+### En effet, il s'agit de données longitudinales
+## Ainsi, il conviendra de choisir aléatoirement
+# une année en particulier pour l'ajustement du modèle de regression linéaire multiple
