@@ -53,7 +53,7 @@ La section « Insérer » permet d'ajouter une multitude d'éléments visuels au
 
 #### Ruban d'affichage
 <img align="left" src="images/ruban_affichage.png" width="500">
-</br></br></br>
+</br></br></br></br></br>
 
 Le ruban d'affichage contient les options utiles afin d'adapter l'interface de Power BI à son style de travail. Il permet d'afficher un grillage, d'afficher des panneaux normalement cachés ou encore d'aligner les visualisations sur le grillage.
 
