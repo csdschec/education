@@ -52,7 +52,8 @@ La section « Insérer » permet d'ajouter une multitude d'éléments visuels au
 ---
 
 #### Ruban d'affichage
-![](images/ruban_affichage.PNG)
+<img align="left" src="images/ruban_affichage.png" width="500">
+</br></br></br>
 
 Le ruban d'affichage contient les options utiles afin d'adapter l'interface de Power BI à son style de travail. Il permet d'afficher un grillage, d'afficher des panneaux normalement cachés ou encore d'aligner les visualisations sur le grillage.
 
@@ -144,6 +145,8 @@ Une clé étrangère permet d'effectuer la liaison avec une autre table, laquell
 
 Power BI détecte automatiquement les relations entre les tables lorsqu'elles sont ajoutées. Il va donc assigner une cardinalité en plus de déterminer quelles sont les clés à retenir. Il faut cependant vérifier qu'il ne s'est pas trompé.
 
+---
+
 ### Cardinalité des relations
 
 La cardinalité est un concept très important du modèle relationnel. Si la cardinalité est mal spécifiée, Power BI peut aggréger de façon incorrecte les données. Il existe trois types de cardinalité :
@@ -183,13 +186,54 @@ Revenons à l'interface principale de Power BI. Le ruban modélisation propose t
  * **Nouvelle table** : En pratique, ce bouton est peu utilisé.
 
 ![](images/sep_4.png)
+
+Avant de créer vos visuels, il est important de rappeler quelques principes de base de la visulisation de données. Les gens ont parfois tendance à créer de magnifiques visuels toujours plus complexes les uns que les autres qui perdent de vue leur objectif premier : communiquer de l'information.
+
 ### Comparer des données
+
+<img align="right" src="images/diagramme_bandes.PNG" width="400">
+
+C'est souvent la principale tâche d'un ou d'une analyste : comment va notre organisation versus la compétition? La principale règle à respecter est de comparer des pommes avec des pommes ou, s'il faut comparer des pommes avec des poires, utiliser la même métrique pour les comparer, comme par exemple le volume de ventes. On utilise alors le **diagramme à bandes**.
+
+L'exemple à droite permet de voir le nombre de pièces moyen pour différentes villes québécoises.
+
+</br></br></br></br>
+
+<img align="right" src="images/graphique_courbe.PNG" width="400">
+
+On désire aussi souvent comparer l'évolution sur le temps : on parle alors de séries temporelles. Le visuel à utiliser ici est le **graphique en courbes**.
+
+L'exemple à droite permet de voir l'évolution, à partir de l'an 2000, du prix moyen des nouvelles constructions.
+
+</br></br></br></br></br></br></br></br>
+
+---
 
 ### Montrer la composition
 
+<img align="right" src="images/diagramme_empilé.PNG" width="400">
+
+On veut voir comment se décompose une variable. Par exemple, quels sont les les pays qui achètent le plus de nos produits, de 2015 à aujourd'hui. Il faut alors faire appel aux visuels « empilés » :  **diagramme à bandes empilées**, **graphique de zone empilé** ou **histogramme empilé**.
+
+L'exemple à droite permet de voir le nombre d'immeubles qui ont 4, 5, 6, 7, 8 ou 9 pièces pour chaque ville.
+
+</br></br></br></br></br>
+
+---
+
 ### Montrer la distribution
 
+À ne pas confondre avec la composition, on cherche ici à montrer une tendance ainsi que des possibles valeurs extrêmes. Power BI est un peu capricieux vis-à-vis la production d'**histogrammes** (malgré une visualisation qui s'appelle ainsi) : il faudra donc être créatif et utiliser Gooogle.
+
+---
+
 ### Montrer une relation
+
+<img align="right" src="images/graphique_courbe.PNG" width="400">
+
+On cherche à déterminer s'il existe une corrélation entre deux variables. La visualisation à utiliser est évidemment le **nuage de points**.
+
+L'exemple à droite montre la corrélation évidente entre les taxes scolairs payées et l'évaluation municipale d'un immeuble.
 
 ![](images/sep_5.png)
 ### Importation
