@@ -11,9 +11,8 @@
   * Cardinalité des relations
   * Intégrité référencielle
 3. Traitement des données
-  * Imputation et remplacement
-  * Colonnes calculées
-  * Mesures
+  * Éditeur Power Query
+  * Mesures & colonnes calculées
 4. Principes de visualisation
   * Comparer des données
   * Montrer la composition
@@ -25,6 +24,19 @@
   * Visualisation
   
 ![](images/sep_1.png)
+
+<img align="right" src="images/onglets.PNG" width="50">
+
+À gauche, vous retrouverez les trois principales sections de travail de Power BI :
+
+ * Rapport : C'est l'interface utilisateur du rapport qui permet la création des visuels (*front-end*)
+ * Données : Ce sont les les données que vous avez importées sous forme de tableur (*back-end*)
+ * Modèle : C'est un schéma du modèle relationnel derrière les données qui est présenté (*back-end*)
+
+Vous retrouverez, dans chacune de ces sections, les mêmes rubans hormis la section rapport qui en a un de plus.
+
+---
+
 ### Les rubans
 Les rubans sont situés dans le haut de l'interface utilisateur de Power BI. Ils sont au nombre de 4 : l'accueil, l'affichage, la modélisation et l'aide. Voyons un peu à quoi servent les trois premiers, le quatrième étant triviale.
 
@@ -37,10 +49,14 @@ La section « Données externes » permet d'importer des données dans le logici
 
 La section « Insérer » permet d'ajouter une multitude d'éléments visuels au rapport : des visualisations, formes, images, zones de texte, boutons, etc.
 
+---
+
 #### Ruban d'affichage
 ![](images/ruban_affichage.PNG)
 
 Le ruban d'affichage contient les options utiles afin d'adapter l'interface de Power BI à son style de travail. Il permet d'afficher un grillage, d'afficher des panneaux normalement cachés ou encore d'aligner les visualisations sur le grillage.
+
+---
 
 #### Ruban de modélisation
 ![](images/ruban_modélisation.PNG)
@@ -51,10 +67,18 @@ La section « Mise en forme » permet de spécifier le format de données d'une 
 
 La section « Propriétés » permet aussi de spécifier le format de données mais pour des données spatiales. Différentes options incluent la ville, la région, le pays, etc. Si une colonne contient des liens vers des sites web, c'est aussi ici qu'il faut l'indiquer.
 
+---
+
 ### Les panneaux
 Les panneaux sont situés à droite de l'interface utilisateur de Power BI. Ils sont au nombre de 3 : filtres, visualisations et champs. Ils sont le principal outil afin d'interagir avec les visulisations du tableau de bord.
 
 #### Panneau de filtres
+
+<img align="right" src="images/panneau_filtres.PNG" width="200">
+
+Le panneau de filtres permet d'appliquer des filtres à un visuel, à une page ou au rapport en entier. Si vous désirez cacher un type de données en particulier (par exemple les chiffres de ventes d'un autre département) il ne faut pas appliquer un filtre sur le rapport au complet : l'usager pourra aisément le retirer. Il faut plutôt aller avec le *row-level security*, un concept qui ne sera pas couvert dans le cadre de ce cours.
+
+Une fois un filtre appliqué, une série d'options s'offre à vous. En fonction du type de données, vous pourrez choisir la manière d'appliquer le filtre. Pour une date par exemple, il est possible de définir une série de dates (mai 2018 et juin 2017), un intervalle de dates (entre mai 2018 et juin 2017) ou encore un seuil (plus vieux que mai 2018).
 
 ---
 
@@ -131,11 +155,32 @@ La cardinalité est un concept très important du modèle relationnel. Si la car
 Le concept de cardinalité M à N peut être difficile à saisir. Un exemple concret de ce type de relation est le suivant : un étudiant peut être inscrit à plusieurs classes et une classe peut avoir plusieurs étudiants. Ainsi, plusieurs étudiants ont plusieurs classes et vice-versa.
 
 ![](images/sep_3.png)
-### Imputation et remplacement
+### Éditeur Power Query
+Le ruban d'accueil possède un bouton « Modifier les requêtes ». Cliquer dessus ouvre une nouvelle fenêtre, l'éditeur *Power Query*, lequel permet de programmer différentes étapes de transformation sur les données. Power BI effectue par défaut des opérations comme promouvoir la première ligne en en-têtes de colonnes ainsi que de changer le type de données de chaque colonne selon ce qu'il détecte. Ces étapes sont rassemblées à droite, dans la section « ÉTAPES APPLIQUÉES ». Les étapes inscrites ici seront effectuées à chaque fois que la source de données sera rafraîchie.
 
-### Colonnes calculées
+#### Ruban transformer
 
-### Mesures
+![](images/ruban_transformer.png)
+
+Ce ruban rassemble une série d'opérations de base sur les données : modifier leur type, renommer une colonne, promouvoir les en-têtes, fusion/séparation de colonnes... C'est aussi ici qu'il est possible de transposer la table, si nécessaire. Enfin, si vous avez un script R ou Python qui effectue un nettoyage des données plus complexe que ce qui est proposé par Power BI, vous pouvez l'ajouter aussi afin qu'il s'exécute automatiquement à chaque rafraîchissement.
+
+---
+
+#### Ruban ajouter une colonne
+
+![](images/ruban_colonne.png)
+
+Ce ruban permet d'ajouter des colonnes personnalisées. Que ce soit avec une formule DAX ou par concaténation (comme dans le ruban précédent), cette colonne sera créée et calculée à chaque fois que les données sont rafraîchies.
+
+---
+
+### Mesures & colonnes calculées
+
+Revenons à l'interface principale de Power BI. Le ruban modélisation propose trois options dans la section « Calculs » :
+
+ * Nouvelle mesure : Une mesure calcule une fonction DAX agrégée selon les paramètres d'un visuel précis. Par exemple, si une mesure est définie comme la somme des ventes est placée dans un visuel, les différents filtres appliqués au visuel modifieront à leur tour la mesure. Celle-ci est à prévilégier lorsque l'information calculée n'a pas besoin d'être stockée ou d'être sélectionné par l'utilisateur.
+ * Nouvelle colonne : Contrairement à la mesure, la colonne entrepose, pour chaque ligne, le résultat de la formule DAX. Cette colonne peut alors être utilisée dans des visuels ou pour calculer d'autres colonnes. Puisqu'elle est sauvegardée, elle alourdie la taille du fichier `.pbix`.
+ * Nouvelle table : En pratique, ce bouton est peu utilisé.
 
 ![](images/sep_4.png)
 ### Comparer des données
