@@ -109,11 +109,26 @@ Le carré à gauche de chaque colonne permet de cocher un attribut afin qu'il so
 </br>
 
 ![](images/sep_2.png)
+
+Le modèle relationnel est une philosophie de gestion des bases de données basée sur l'existence d'uplets, reliés entre eux par des relations. On dit alors qu'une base de donnée organisée selon ce modèle est une base de données relationnelle.
+
 ### Clé primaire & étrangère
+
+Chaque entrée d'une table doit posséder un identifiant unique, qu'on qualifie de « clé primaire ». Le matricule HEC est un bon exemple de clé primaire. Ainsi, les caractéristiques communes d'un enregistrement doivent être regroupées dans une même table (âge, sexe, nom, etc), c'est-à-dire liées à la clé primaire
+
+Une clé étrangère permet d'effectuer la liaison avec une autre table, laquelle n'a pas la même clé primaire. Les cours suivis sont un bon exemple de ce concept. Ici, la clé primaire serait l'identifiant du cours, tel que MATH101 par exemple, et le matricule étudiant serait, de ce point de vue, une clé étrangère.
+
+Power BI détecte automatiquement les relations entre les tables lorsqu'elles sont ajoutées. Il va donc assigner une cardinalité en plus de déterminer quelles sont les clés à retenir. Il faut cependant vérifier qu'il ne s'est pas trompé.
 
 ### Cardinalité des relations
 
-### Intégrité référencielle
+La cardinalité est un concept très important du modèle relationnel. Si la cardinalité est mal spécifiée, Power BI peut aggréger de façon incorrecte les données. Il existe trois types de cardinalité :
+
+* 1 à 1 : Pour chaque entrée dans la table A, la table B a une entrée.
+* 1 à N : Pour chaque entrée dans la table A, il y a N entrées dans la table B.
+* M à N : Pour M entrées dans la table A, il y a N entrées dans la table B.
+
+Le concept de cardinalité M à N peut être difficile à saisir. Un exemple concret de ce type de relation est le suivant : un étudiant peut être inscrit à plusieurs classes et une classe peut avoir plusieurs étudiants. Ainsi, plusieurs étudiants ont plusieurs classes et vice-versa.
 
 ![](images/sep_3.png)
 ### Imputation et remplacement
