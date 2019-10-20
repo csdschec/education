@@ -56,9 +56,57 @@ Les panneaux sont situés à droite de l'interface utilisateur de Power BI. Ils 
 
 #### Panneau de filtres
 
-#### Panneau de visualisation
+---
+
+#### Panneau de visualisations
+
+<img align="left" src="images/panneau_visualisations.PNG">
+
+Le panneau de visualisation est le panneau le plus complexe et celui dont vous vous servirez le plus souvent afin de personnaliser les paramètres des visuels par défaut de Power BI. L'image à gauche montre le haut du panneau, qui sert à sélectionner le type de visuel. Les visuels par défaut de Power BI s'arrête à l'image de « Py », pour Python. 
+
+En effet, le logiciel supporte les visuels personnalisés codés en R ou Python. Ceux-ci ne sont cependant pas interactifs. C'est après ce symbol que commencent les visuels provenant de la Place de marché. Plus bas, vous retrouverez 3 onglets.
+
+---
+
+<img align="right" src="images/panneau_visualisations_1.PNG">
+
+Le premier onglet est celui permettant de sélectionner les données à utiliser en glissant des attributs dans différents champs, lesquels varient selon le type visuel choisi. 
+
+Fait important : lorsqu'un attribut est glissé dans le champ « valeurs », Power BI utilise par défaut la somme de ce champ. Il faut donc être prudent afin de sélectionner la bonne méthode d'aggrégation des données.
+
+Les visuels supportent aussi la coloration en fonction d'une variable catégorielle, par exemple. Ceci est possible via le champ « Légende ». Ainsi, si un nuage de points représente un groupe aux catégories d'âge variées, y glisser l'attribut colorera les points automatiquement.
+
+---
+
+<img align="left" src="images/panneau_visualisations_2.PNG">
+
+Le second onglet est celui contenant l'ensemble des options de personnalisation graphique du visuel. S'il y a un détail à l'oeil qui vous dérange, il y a 100% de chances qu'il soit possible de le changer grâce à cet onglet. Il est donc important de bien fouiller dans cette section afin de trouver le paramètre que vous voulez personnaliser.
+
+Titre du graphique, couleur des points, grosseur du trait, titres des axes... Tout s'y trouve. En fonction du visuel, des paramètres supplémentaires peuvent aussi être disponibles.
+
+Les noms des sections sont assez explicites mais parfois un paramètre peut parfois être bien caché : Seule l'expérience vous permettra de trouver rapidement où aller.
+
+---
+
+<img align="right" src="images/panneau_visualisations_3.PNG">
+
+Le troisième et dernier onglet contient les fonctions analytiques proposées par Microsoft pour chacune des visusalisations. C'est ici, par exemple, que se retrouve l'option d'ajouter une ligne de tendance (régression linéaire) pour une visulisation de type « nuage de points ».
+
+Cet onglet n'est pas toujours disponible puisque certaines visualisations ne supportent tout simplement pas de méthodes analytiques avancées : pensons aux tableaux, par exemple. Les séries temporelles permettent de faire de l'auto-régression en spécifiant quelques paramètres. La documentation de Power BI explique quelle méthode est utilisée.
+
+---
 
 #### Panneau de champs
+
+<img align="left" src="images/panneau_champs.PNG">
+
+Le panneau champs est l'endroit où sont rassemblées toutes les données que vous avez importées jusqu'à présent. Celles-ci sont affichées par table, qui montre les différentes colonnes lorsque vous la cliquez. Le symbole de sommation indique une donnée numérique qui supportera différents modes d'agrégation (sommation, moyenne, maximum, etc.).
+
+Dans l'exemple à gauche, quatre tables ont été importées ; la table « immeuble_id » contient deux colonnes, dont une qui est numérique, «  TYPE_TRANSACTION ».
+
+Le carré à gauche de chaque colonne permet de cocher un attribut afin qu'il soit utilisé dans le visuel présentement sélectionné. C'est une option alternative à glisser l'attribut vers le premier onglet du panneau de visualisation.
+
+</br>
 
 ![](images/sep_2.png)
 ### Clé primaire & étrangère
