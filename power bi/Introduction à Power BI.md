@@ -29,9 +29,9 @@
 
 À gauche, vous retrouverez les trois principales sections de travail de Power BI :
 
- * Rapport : C'est l'interface utilisateur du rapport qui permet la création des visuels (*front-end*)
- * Données : Ce sont les les données que vous avez importées sous forme de tableur (*back-end*)
- * Modèle : C'est un schéma du modèle relationnel derrière les données qui est présenté (*back-end*)
+ * **Rapport** : C'est l'interface utilisateur du rapport qui permet la création des visuels (*front-end*)
+ * **Données** : Ce sont les les données que vous avez importées sous forme de tableur (*back-end*)
+ * **Modèle** : C'est un schéma du modèle relationnel derrière les données qui est présenté (*back-end*)
 
 Vous retrouverez, dans chacune de ces sections, les mêmes rubans hormis la section rapport qui en a un de plus.
 
@@ -126,7 +126,7 @@ Cet onglet n'est pas toujours disponible puisque certaines visualisations ne sup
 
 Le panneau champs est l'endroit où sont rassemblées toutes les données que vous avez importées jusqu'à présent. Celles-ci sont affichées par table, qui montre les différentes colonnes lorsque vous la cliquez. Le symbole de sommation indique une donnée numérique qui supportera différents modes d'agrégation (sommation, moyenne, maximum, etc.).
 
-Dans l'exemple à gauche, quatre tables ont été importées ; la table « immeuble_id » contient deux colonnes, dont une qui est numérique, «  TYPE_TRANSACTION ».
+Dans l'exemple à gauche, quatre tables ont été importées ; la table « immeuble_id » contient deux colonnes, dont une qui est numérique, « TYPE_TRANSACTION ».
 
 Le carré à gauche de chaque colonne permet de cocher un attribut afin qu'il soit utilisé dans le visuel présentement sélectionné. C'est une option alternative à glisser l'attribut vers le premier onglet du panneau de visualisation.
 
@@ -148,9 +148,9 @@ Power BI détecte automatiquement les relations entre les tables lorsqu'elles so
 
 La cardinalité est un concept très important du modèle relationnel. Si la cardinalité est mal spécifiée, Power BI peut aggréger de façon incorrecte les données. Il existe trois types de cardinalité :
 
-* 1 à 1 : Pour chaque entrée dans la table A, la table B a une entrée.
-* 1 à N : Pour chaque entrée dans la table A, il y a N entrées dans la table B.
-* M à N : Pour M entrées dans la table A, il y a N entrées dans la table B.
+* **1 à 1** : Pour chaque entrée dans la table A, la table B a une entrée.
+* **1 à N** : Pour chaque entrée dans la table A, il y a N entrées dans la table B.
+* **M à N** : Pour M entrées dans la table A, il y a N entrées dans la table B.
 
 Le concept de cardinalité M à N peut être difficile à saisir. Un exemple concret de ce type de relation est le suivant : un étudiant peut être inscrit à plusieurs classes et une classe peut avoir plusieurs étudiants. Ainsi, plusieurs étudiants ont plusieurs classes et vice-versa.
 
@@ -168,7 +168,7 @@ Ce ruban rassemble une série d'opérations de base sur les données : modifier 
 
 #### Ruban ajouter une colonne
 
-![](images/ruban_colonne.png)
+![](images/ruban_colonne.PNG)
 
 Ce ruban permet d'ajouter des colonnes personnalisées. Que ce soit avec une formule DAX ou par concaténation (comme dans le ruban précédent), cette colonne sera créée et calculée à chaque fois que les données sont rafraîchies.
 
@@ -178,9 +178,9 @@ Ce ruban permet d'ajouter des colonnes personnalisées. Que ce soit avec une for
 
 Revenons à l'interface principale de Power BI. Le ruban modélisation propose trois options dans la section « Calculs » :
 
- * Nouvelle mesure : Une mesure calcule une fonction DAX agrégée selon les paramètres d'un visuel précis. Par exemple, si une mesure est définie comme la somme des ventes est placée dans un visuel, les différents filtres appliqués au visuel modifieront à leur tour la mesure. Celle-ci est à prévilégier lorsque l'information calculée n'a pas besoin d'être stockée ou d'être sélectionné par l'utilisateur.
- * Nouvelle colonne : Contrairement à la mesure, la colonne entrepose, pour chaque ligne, le résultat de la formule DAX. Cette colonne peut alors être utilisée dans des visuels ou pour calculer d'autres colonnes. Puisqu'elle est sauvegardée, elle alourdie la taille du fichier `.pbix`.
- * Nouvelle table : En pratique, ce bouton est peu utilisé.
+ * **Nouvelle mesure** : Une mesure calcule une fonction DAX agrégée selon les paramètres d'un visuel précis. Par exemple, si une mesure est définie comme la somme des ventes est placée dans un visuel, les différents filtres appliqués au visuel modifieront à leur tour la mesure. Celle-ci est à prévilégier lorsque l'information calculée n'a pas besoin d'être stockée ou d'être sélectionné par l'utilisateur.
+ * **Nouvelle colonne** : Contrairement à la mesure, la colonne entrepose, pour chaque ligne, le résultat de la formule DAX. Cette colonne peut alors être utilisée dans des visuels ou pour calculer d'autres colonnes. Puisqu'elle est sauvegardée, elle alourdie la taille du fichier `.pbix`.
+ * **Nouvelle table** : En pratique, ce bouton est peu utilisé.
 
 ![](images/sep_4.png)
 ### Comparer des données
