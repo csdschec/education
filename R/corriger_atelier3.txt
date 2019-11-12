@@ -1,0 +1,21 @@
+## Exercice 1
+#############
+
+library(tidyverse)
+library(questionr)
+data(rp2012)
+
+rp69 <- rp2012[rp2012$departement == c("Rhône", "Loire"), ]
+
+# 1 
+ggplot(rp69) + 
+  geom_point(aes(x = dipl_aucun, y = ouvr, color = departement, size = pop_tot, alpha = 0.5))
+
+# 2
+ggplot(rp69) + 
+  geom_boxplot(aes(x = pop_cl, y = proprio, fill = departement))
+
+# 3
+ggplot(rp69) + 
+  geom_point(aes(x=cadres, y=dipl_sup, size = pop_tot), alpha = 0.5) +
+  facet_grid(~departement)
