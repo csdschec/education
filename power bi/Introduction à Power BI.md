@@ -260,7 +260,6 @@ Que se passe-t-il si la fonction `DIVIDE()`n'est pas utilisée?
 Vous devez produire les visualisations appropriées permettant de répondre aux 4 questions suivantes :
  1. Quels sont les arrondissements où le RATIO moyen précédemment calculé est le plus élevé? Que pensez-vous que ces arrondissements sont? Ne conservez que les ratio moyens supérieurs à 1.5 pour alléger le visuel.
  2. Quels sont les codes postaux où la moyenne des taxes totales payées est la plus élevées? Utiliser un visuel afin de représenter géographiquement où se situent ces codes postaux. Faites attention à ne pas surcharger le visuel.
- 3. Est-ce qu'il y a une corrélation entre les taxes municipales payées et le nombre de pièces de l'immeuble? 
-  * Ajouter une coloration selon la région, puis filtrer pour garder uniquement Montréal, Laval et Sherbrooke. Que constatez-vous?
+ 3. Est-ce qu'il y a une corrélation entre les taxes municipales payées et le nombre de pièces de l'immeuble? Ajouter une coloration selon la région, puis filtrer pour garder uniquement Montréal, Laval et Sherbrooke. Que constatez-vous?
  
 
