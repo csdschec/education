@@ -229,7 +229,7 @@ L'exemple à droite permet de voir le nombre d'immeubles qui ont 4, 5, 6, 7, 8 o
 
 ### Montrer une relation
 
-<img align="right" src="images/graphique_courbe.PNG" width="400">
+<img align="right" src="images/nuage_points.PNG" width="400">
 
 On cherche à déterminer s'il existe une corrélation entre deux variables. La visualisation à utiliser est évidemment le **nuage de points**.
 
@@ -238,6 +238,29 @@ L'exemple à droite montre la corrélation évidente entre les taxes scolairs pa
 ![](images/sep_5.png)
 ### Importation
 
+Pour commencer, il faut importer les fichiers de données suivants, qui se trouvent dans le dossier data :
+ 1. immeuble_adresse.csv
+ 2. immeuble_caracteristique.csv
+ 3. immeuble_finance.csv
+ 4. immeuble_id.csv
+
+Vérifier le schéma relationnel des données. Celui-ci a-t-il été correctement généré? Quelle est la clé primaire? Est-ce qu'il y a des clés étrangères? Quelle est la cardinalité des relations?
+
 ### Traitement
 
+Afin de répondre aux questions de recherche de la prochaine section, il est nécessaire de créer quelques colonnes calculées :
+ 1. TAX_TOT, en additionnant les taxes municipales et les taxes scolaires
+ 2. TAX_TOT_10K, qui indique si le total des taxes est supérieur ou inférieur à 10 000$, grâce à `IF(COND, TRUE, FALSE)`
+ 3. RATIO, en divisant l'évaluation du terrain par celle du bâtiment grâce à la fonction `DIVIDE(NUM, DENUM)`
+
+Que se passe-t-il si la fonction `DIVIDE()`n'est pas utilisée?
+
 ### Visualisation
+
+Vous devez produire les visualisations appropriées permettant de répondre aux 4 questions suivantes :
+ 1. Quels sont les arrondissements où le RATIO moyen précédemment calculé est le plus élevé? Que pensez-vous que ces arrondissements sont? Ne conservez que les ratio moyens supérieurs à 1.5 pour alléger le visuel.
+ 2. Quels sont les codes postaux où la moyenne des taxes totales payées est la plus élevées? Utiliser un visuel afin de représenter géographiquement où se situent ces codes postaux. Faites attention à ne pas surcharger le visuel.
+ 3. Est-ce qu'il y a une corrélation entre les taxes municipales payées et le nombre de pièces de l'immeuble? 
+  * Ajouter une coloration selon la région, puis filtrer pour garder uniquement Montréal, Laval et Sherbrooke. Que constatez-vous?
+ 
+
