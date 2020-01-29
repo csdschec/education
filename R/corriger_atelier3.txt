@@ -9,7 +9,7 @@ rp69 <- rp2012[rp2012$departement == c("Rhône", "Loire"), ]
 
 # 1 
 ggplot(rp69) + 
-  geom_point(aes(x = dipl_aucun, y = ouvr, color = departement, size = pop_tot, alpha = 0.5))
+  geom_point(aes(x = dipl_aucun, y = ouvr, color = departement, size = pop_tot), alpha = 0.5))
 
 # 2
 ggplot(rp69) + 
